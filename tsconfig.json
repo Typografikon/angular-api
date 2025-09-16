@@ -7,15 +7,10 @@
     "noImplicitOverride": true,
     "noPropertyAccessFromIndexSignature": true,
     "noImplicitReturns": true,
-    "paths": {
-      "message-api": [
-        "./dist/message-api"
-      ]
-    },
-    "noFallthroughCasesInSwitch": true,
     "skipLibCheck": true,
     "isolatedModules": true,
     "experimentalDecorators": true,
+    "noFallthroughCasesInSwitch": true,
     "importHelpers": true,
     "target": "ES2022",
     "module": "preserve"
@@ -25,8 +20,11 @@
     "strictInjectionParameters": true,
     "strictInputAccessModifiers": true,
     "typeCheckHostBindings": true,
-    "strictTemplates": true
+    "strictTemplates": true,
+    "compilationMode": "partial"
   },
-  "files": ["src/**/*.ts"],
+  "files": [
+    "src/**/*.ts"
+  ],
   "references": []
 }
