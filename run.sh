@@ -1,8 +1,6 @@
 #!/bin/bash
 
-rm -rfv .angular &&
-rm -rfv dist &&
-rm -rfv src/message-api &&
+rm -rfv .angular dist src/message-api &&
 java -jar util/openapi-generator-cli.jar validate -i src/message-api.json &&
 java -jar util/openapi-generator-cli.jar generate -i src/message-api.json -g typescript-angular -o src/message-api &&
 npm install &&
