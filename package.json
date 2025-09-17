@@ -9,8 +9,8 @@
     "pack": "npm pack ./dist/message-api --pack-destination dist"
   },
   "engines": {
-    "node": "22.11.0",
-    "npm": "10.9.0"
+    "node": ">=22.12.0 <23",
+    "npm": ">=10.9.0 <11"
   },
   "dependencies": {
     "tslib": "latest"
