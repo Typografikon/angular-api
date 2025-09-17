@@ -3,7 +3,14 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "build": "ng build message-api"
+    "clean": "rm -rfv package-lock.json node_modules .angular dist src/message-api",
+    "generate": "java -jar util/openapi-generator-cli.jar validate -i src/message-api.json && java -jar util/openapi-generator-cli.jar generate -i src/message-api.json -g typescript-angular -o src/message-api",
+    "build": "ng build message-api",
+    "pack": "npm pack ./dist/message-api --pack-destination dist"
+  },
+  "engines": {
+    "node": "22.11.0",
+    "npm": "10.9.0"
   },
   "dependencies": {
     "tslib": "latest"
