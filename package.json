@@ -3,7 +3,7 @@
   "version": "0.0.1",
   "private": true,
   "scripts": {
-    "clean": "rm -rfv package-lock.json node_modules .angular dist src/message-api",
+    "clean": "rm -rfv package-lock.json node_modules .angular dist src/message-api && npm cache clean --force",
     "generate": "java -jar util/openapi-generator-cli.jar validate -i src/message-api.json && java -jar util/openapi-generator-cli.jar generate -i src/message-api.json -g typescript-angular -o src/message-api",
     "build": "ng build message-api",
     "pack": "npm pack ./dist/message-api --pack-destination dist"
@@ -13,21 +13,21 @@
     "npm": ">=10.9.0 <11"
   },
   "dependencies": {
-    "tslib": "latest"
+    "tslib": "2.6.0"
   },
   "peerDependencies": {
-    "@angular/core": "latest",
-    "@angular/common": "latest",
-    "@angular/compiler": "latest",
-    "@angular/platform-browser": "latest",
-    "@angular/platform-browser-dynamic": "latest",
-    "rxjs": "latest",
-    "zone.js": "latest"
+    "@angular/core": "20.3.0",
+    "@angular/common": "20.3.0",
+    "@angular/compiler": "20.3.0",
+    "@angular/platform-browser": "20.3.0",
+    "@angular/platform-browser-dynamic": "20.3.0",
+    "rxjs": "7.8.1",
+    "zone.js": "0.15.0"
   },
   "devDependencies": {
-    "@angular-devkit/build-angular": "latest",
-    "@angular/cli": "latest",
-    "ng-packagr": "latest",
-    "typescript": "latest"
+    "@angular-devkit/build-angular": "20.3.0",
+    "@angular/cli": "20.3.0",
+    "ng-packagr": "20.3.0",
+    "typescript": "5.8.3"
   }
 }
